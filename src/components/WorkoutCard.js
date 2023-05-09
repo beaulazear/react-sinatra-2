@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import BarGraph from "./BarChart";
 
 export default function WorkoutCard({ exercise, handleWorkoutSubmit, addWorkout }) {
 
@@ -9,7 +8,6 @@ export default function WorkoutCard({ exercise, handleWorkoutSubmit, addWorkout 
     const [selectValue, setSelectValue] = useState('')
     const lastTenWorkouts = exercise.workouts.slice(-10)
     const lastTwoWorkouts = exercise.workouts.slice(-2)
-    const lastTenWorkoutsWeights = lastTenWorkouts.map(({ weight, id }) => ({ weight, id }))
     const selectOptions = [2, 10, "All"]
 
     function handleSelectChange(e) {
@@ -97,9 +95,6 @@ export default function WorkoutCard({ exercise, handleWorkoutSubmit, addWorkout 
                         ))}
                     </ul>
                 ) : <p>Select an option above to view past workouts!</p>}
-                <p>See data visualization for recent weight trends below.</p>
-                {/* The component below is not a part of my project, it is for personal use only! */}
-                {/* <BarGraph data={lastTenWorkoutsWeights} /> */}
             </p>
         </div>
     )
