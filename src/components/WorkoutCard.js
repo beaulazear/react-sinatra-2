@@ -48,15 +48,15 @@ export default function WorkoutCard({ exercise, handleWorkoutSubmit, addWorkout 
     }
     return (
         <div className="workoutCardDiv">
-            <p className="cardTextArea">
+            <div className="cardTextArea">
                 <form onSubmit={handleWorkoutSubmit} className="newWorkoutForm">
                     <h2>{exercise.name}</h2>
                     <h3>Add New Workout:</h3>
-                    <p>Please use only whole numbers for input!</p>
-                    <label for="reps">Reps</label>
+                    <div>Please use only whole numbers for input!</div>
+                    <label>Reps</label>
                     <input id="reps" type="text" placeholder="Reps" value={reps} onChange={handleSetReps}></input>
                     <br></br>
-                    <label for="weight">Weight in lbs</label>
+                    <label>Weight in lbs</label>
                     <input id="weight" type="text" placeholder="Weight (lbs)" value={weight} onChange={handleSetWeight}></input>
                     <br></br>
                     <button type="submit">Submit</button>
@@ -94,8 +94,8 @@ export default function WorkoutCard({ exercise, handleWorkoutSubmit, addWorkout 
                             </div>
                         ))}
                     </ul>
-                ) : <p>Select an option above to view past workouts!</p>}
-            </p>
+                ) : <div>Select an option above to view past workouts!</div>}
+            </div>
         </div>
     )
 }

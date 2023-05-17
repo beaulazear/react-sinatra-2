@@ -47,15 +47,15 @@ export default function ExerciseCard({ exercise, removeExerciseThenUpdate, updat
 
     return (
         <div className="exerciseCard">
-            <p className="cardTextArea">
+            <div className="cardTextArea">
             <h2>{exercise.name}</h2>
             <p>{exercise.description}</p>
             <form id="newExerciseForm" onSubmit={updateExerciseSubmit}>
                 <h3>Update Exercise:</h3>
-                <label for="nameInput">Name</label>
+                <label>Name</label>
                 <input id="nameInput" type="text" placeholder="Exercise Name" value={exerciseName} onChange={handleExerciseName}></input>
                 <br></br>
-                <label for="descriptionInput">Description</label>
+                <label>Description</label>
                 <textarea rows={8} cols={40} id="descriptionInput" type="text" placeholder="Exercise Description" value={exerciseDesc} onChange={handleExerciseDesc}></textarea>
                 <br></br>
                 <button type="submit">Submit</button>
@@ -70,7 +70,7 @@ export default function ExerciseCard({ exercise, removeExerciseThenUpdate, updat
                 ))}
             </ul>
             <button className="button-18" onClick={removeExercise}>Remove exercise</button>
-            </p>
+            </div>
         </div>
     )
 }
