@@ -12,8 +12,6 @@ export default function ExerciseCard({ exercise, removeExerciseThenUpdate, updat
         setExerciseDesc(e.target.value)
     }
 
-    const lastTwoWorkouts = exercise.workouts.slice(-2)
-
     function removeExercise() {
         fetch(`http://localhost:9292/exercises/${exercise.id}`, {
             method: "DELETE",
@@ -60,15 +58,7 @@ export default function ExerciseCard({ exercise, removeExerciseThenUpdate, updat
                 <br></br>
                 <button type="submit">Submit</button>
             </form>
-            <p>Listed below are the weights used / reps completed for the last two times you've performed this exercise!</p>
-            {/* how could I make an if statement here? ex.. if !exercise.workouts, return "No workouts yet!" */}
-            <ul id="exerciseNewWorkoutUl">
-                {lastTwoWorkouts.map((workout) => (
-                    <div key={workout.id}>
-                        <li>{workout.reps} reps at {workout.weight} lbs on {new Date(workout.created_at).toDateString()}</li>
-                    </div>
-                ))}
-            </ul>
+            <p>Visit the Workouts page to see past workouts, and add new ones!</p>
             <button className="button-18" onClick={removeExercise}>Remove exercise</button>
             </div>
         </div>

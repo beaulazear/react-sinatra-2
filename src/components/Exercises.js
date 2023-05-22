@@ -15,7 +15,8 @@ export default function Exercises({ exercises, addExercise, removeExerciseThenUp
 
     const newExercise = {
         name: newExerciseName,
-        description: newExerciseDescription
+        description: newExerciseDescription,
+        workouts: []
     }
 
     function handleFormSubmit(e) {

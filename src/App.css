@@ -37,10 +37,11 @@
   color: rgb(255, 255, 255, .7);
 }
 
-body {
+ 
+/* body {
   background-image: url("./images/bg2.jpg");
-  /* background image from https://www.vecteezy.com/vector-art/7169479-asanoha-japanese-traditional-seamless-pattern-with-modern-cream-grey-gradient-color-background-use-for-fabric-textile-cover-wrapping-interior-decoration-elements Asanoha Japanese traditional seamless pattern with modern cream grey gradient color background. Use for fabric, textile, cover, wrapping, interior decoration elements. Vectors by Vecteezy */
-}
+  background image from https://www.vecteezy.com/vector-art/7169479-asanoha-japanese-traditional-seamless-pattern-with-modern-cream-grey-gradient-color-background-use-for-fabric-textile-cover-wrapping-interior-decoration-elements Asanoha Japanese traditional seamless pattern with modern cream grey gradient color background. Use for fabric, textile, cover, wrapping, interior decoration elements. Vectors by Vecteezy
+ } */
 
 .navButtons {
   display: inline-block;
