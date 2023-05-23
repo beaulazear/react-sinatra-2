@@ -15,8 +15,7 @@ export default function Exercises({ exercises, addExercise, removeExerciseThenUp
 
     const newExercise = {
         name: newExerciseName,
-        description: newExerciseDescription,
-        workouts: []
+        description: newExerciseDescription
     }
 
     function handleFormSubmit(e) {
@@ -38,6 +37,8 @@ export default function Exercises({ exercises, addExercise, removeExerciseThenUp
                 setNewExerciseName('')
             })
     }
+
+    // params come from body of the fetch
 
     if (!exercises) return <h2>...loading</h2>
 
